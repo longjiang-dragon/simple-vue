@@ -3,6 +3,7 @@ function SimpleVue (options) {
   this.vm = this
   this.data = options.data
   this.methods = options.methods
+  //添加对data数据的监听
   Object.keys(this.data).forEach(function(key) {
     self.proxyKeys(key)
   })
